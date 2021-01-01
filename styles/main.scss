@@ -1,0 +1,28 @@
+@import "./reset";
+
+/* Global */
+
+body {
+    margin: 5% auto;
+    width: 500px;
+    padding: 40px;
+    position: relative;
+    border: 12px solid rgb(114, 108, 108);
+    border-radius: 20px;
+    box-shadow: 0 0 10px #b3b3b3;
+    font-size: 15px;
+    font-family: Roboto-Light;
+}
+
+h1 {
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: Lobster-Regular;
+    letter-spacing: 3px;
+    font-size: 45px;
+    color: rgb(66, 64, 64);
+}
+
+@import "./dropdown";
+@import "./accordion";
+@import "./modal";
