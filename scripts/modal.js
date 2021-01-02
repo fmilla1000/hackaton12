@@ -1,35 +1,43 @@
-function saludar(nombre) {
-    alert("hola" + nombre)
+class Modal {
+    constructor(btnA, btnC) {
+        this.btnA = btnA;
+        this.btnC = btnC;
+    }
+
+    mostrarModal() {
+        const modal = document.getElementById("js_modal");
+        this.btnA.onclick = function() {
+            modal.style.display = "block";
+        }
+    }
+
+    cerrarModal() {
+        const modal = document.getElementById("js_modal");
+        this.btnC.onclick = function() {
+            modal.style.display = "none";
+        }
+    }
+
 }
 
-function pro(callback) {
-    var nombre = prompt("ingresa tu nom");
-    callback(nombre)
-}
+const btn = document.getElementById("js_button-modal");
+const close = document.querySelector(".close");
+
+let nuevoM = new Modal(btn, close)
+nuevoM.mostrarModal()
+nuevoM.cerrarModal()
+
+console.log(nuevoM)
 
 
-// Get the modal
-var modal = document.getElementById("myModal");
+const g = document.getElementById("js_guardar");
+const c = document.getElementById("js_cancelar");
+const modal = document.getElementById("js_modal");
 
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-    modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+g.onclick = function() {
     modal.style.display = "none";
 }
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
+c.onclick = function() {
+    modal.style.display = "none";
 }

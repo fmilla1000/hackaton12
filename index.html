@@ -23,15 +23,19 @@
 
 <body>
     <h1>Hackaton12</h1>
+    <h2>Dropdown</h2>
+    <hr>
     <div class="dropdown">
         <button id="js_button" class="dropdown-button">Dropdown<div class="triangle"></div></button>
         <div id="js_content" class="dropdown-content">
-            <a href="#">Item 1</a>
-            <a href="#">Item 2</a>
-            <a href="#">Item 3</a>
+            <a href="#Item1">Item 1</a>
+            <a href="#Item2">Item 2</a>
+            <a href="#Item3">Item 3</a>
         </div>
     </div>
     <script src="./scripts/dropdown.js"></script>
+    <h2>Accordion</h2>
+    <hr>
     <div class="accordion">
         <button class="accordion-button">Collapsible Group Item #1</button>
         <div class="accordion-text">
@@ -56,24 +60,23 @@
         </div>
     </div>
     <script src="./scripts/accordion.js"></script>
-    <div class="modal0">
-        <button id="myBtn">Abrir modal</button>
+    <h2>Modal</h2>
+    <hr>
+    <div class="modal">
+        <button id="js_button-modal" class="button-modal">Abrir modal</button>
 
-        <!-- The Modal -->
-        <div id="myModal" class="modal">
-
-            <!-- Modal content -->
+        <div id="js_modal" class="modal-background">
             <div class="modal-content">
                 <div class="modal-header">
                     <span class="close">&times;</span>
-                    <h2>Modal Title</h2>
+                    <h3>Modal Title</h3>
                 </div>
                 <div class="modal-body">
                     <p>Modal Body goes here</p>
                 </div>
                 <div class="modal-footer">
-                    <button>Close</button>
-                    <button>Save Changes</button>
+                    <button id="js_cancelar">Close</button>
+                    <button id="js_guardar" class="button-save">Save Changes</button>
                 </div>
             </div>
 
