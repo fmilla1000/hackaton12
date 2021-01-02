@@ -5,10 +5,10 @@ class Dropdown {
     show() {
         this.button.addEventListener("click", function() {
             let click = document.getElementById("js_content");
-            if (click.style.display === "none") {
-                click.style.display = "block";
-            } else {
+            if (click.style.display === "block") {
                 click.style.display = "none";
+            } else {
+                click.style.display = "block";
             }
         })
     }
