@@ -4,7 +4,7 @@ class Dropdown {
     }
     show() {
         this.button.addEventListener("click", function() {
-            let click = document.getElementById("js_content");
+            let click = document.querySelector(".dropdown-content");
             if (click.style.display === "block") {
                 click.style.display = "none";
             } else {

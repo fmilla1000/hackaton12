@@ -12,7 +12,7 @@
     font-family: Roboto-Light;
 }
 
-.modal-background {
+.js_modal {
     display: none;
     position: fixed;
     z-index: 1;
@@ -22,6 +22,10 @@
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.4);
+}
+
+.js_modal.is-active {
+    display: block;
 }
 
 .modal-content {

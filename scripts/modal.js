@@ -1,43 +1,39 @@
-class Modal {
-    constructor(btnA, btnC) {
-        this.btnA = btnA;
-        this.btnC = btnC;
-    }
+function Modal(options) {
+    this.element = document.querySelector(options.element);
+    this.elementClose = this.element.querySelector('.close');
+    this.elementCancel = this.element.querySelector('.js_cancelar');
+    this.elementSave = this.element.querySelector('.button-save')
 
-    mostrarModal() {
-        const modal = document.getElementById("js_modal");
-        this.btnA.onclick = function() {
-            modal.style.display = "block";
-        }
-    }
-
-    cerrarModal() {
-        const modal = document.getElementById("js_modal");
-        this.btnC.onclick = function() {
-            modal.style.display = "none";
-        }
-    }
-
+    this.registerEvens(options)
 }
 
-const btn = document.getElementById("js_button-modal");
-const close = document.querySelector(".close");
-
-let nuevoM = new Modal(btn, close)
-nuevoM.mostrarModal()
-nuevoM.cerrarModal()
-
-console.log(nuevoM)
-
-
-const g = document.getElementById("js_guardar");
-const c = document.getElementById("js_cancelar");
-const modal = document.getElementById("js_modal");
-
-g.onclick = function() {
-    modal.style.display = "none";
+Modal.prototype.open = function() {
+    this.element.classList.add('is-active')
+}
+Modal.prototype.close = function() {
+    this.element.classList.remove('is-active')
 }
 
-c.onclick = function() {
-    modal.style.display = "none";
+Modal.prototype.registerEvens = function(options) {
+    this.elementClose.onclick = () => {
+        this.close()
+    }
+
+    this.elementCancel.onclick = () => {
+        this.close()
+    }
+
+    this.elementSave.onclick = () => {
+        this.close()
+    }
+}
+const nuevoModal = new Modal({
+    element: '.js_modal',
+})
+
+const butn = document.querySelector('.button-modal');
+
+butn.onclick = function() {
+    nuevoModal.open()
+    console.log(nuevoModal)
 }
